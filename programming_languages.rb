@@ -1,7 +1,7 @@
 def reformat_languages(languages)
   new_hash = {}
-  languages.each { |type, hash|
-    hash.each { |name, attributes|
+  languages.map { |type, hash|
+    hash.map { |name, attributes|
       new_hash[name] ||= attributes
       new_hash[name][:style] ||= []
       new_hash[name][:style] << type
